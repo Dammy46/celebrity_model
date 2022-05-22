@@ -138,7 +138,6 @@ class App extends Component {
           <SignIn
             loadUser={this.loadUser}
             routeChange={this.routeChng}
-            notify={this.createNotification}
           />
         ) : (
           <Register loadUser={this.loadUser} routeChange={this.routeChng} />

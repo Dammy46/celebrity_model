@@ -13,3 +13,8 @@
 .btn{
   background-color: #149df2;
 }
+@media (max-width: 425px){
+  .form{
+    width: 350px;
+  }
+}

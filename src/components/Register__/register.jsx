@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Register = ({ routeChange, loadUser, notify }) => {
+const Register = ({ routeChange, loadUser  }) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -17,7 +17,7 @@ const Register = ({ routeChange, loadUser, notify }) => {
 
   const onSubmit = () => {
     fetch('https://rocky-fjord-74712.herokuapp.com/register', {
-      method: 'POST',
+      method: 'post',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         name: name,
@@ -27,7 +27,7 @@ const Register = ({ routeChange, loadUser, notify }) => {
     })
       .then((res) => res.json())
       .then((user) => {
-        if (user.id) {
+        if (user.id) {    
           loadUser(user);
           routeChange('home');
         }

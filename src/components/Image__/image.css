@@ -2,6 +2,13 @@
   display: flex;
   justify-content: center;
 }
+@media (max-width: 425px){
+  .absolute{
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
 .bounding-box {
   position: absolute;
   box-shadow: 0 0 0 3px #149df2 inset;
